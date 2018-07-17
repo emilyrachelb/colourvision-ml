@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eacad22-bee8-4a3f-bde5-3e88e213bd8a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,12 +17,12 @@
     <SUITE FILE_PATH="coverage/colourvision_ml$download.coverage" NAME="download Coverage Results" MODIFIED="1531801263510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="download.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/download.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="157" column="42" selection-start-line="157" selection-start-column="42" selection-end-line="157" selection-end-column="42" />
+            <state relative-caret-position="243">
+              <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
               <folding>
                 <element signature="e#226#235#0" expanded="true" />
               </folding>
@@ -28,10 +30,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="red.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/colourlists/red.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7185">
+              <caret line="479" selection-start-line="479" selection-end-line="479" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="test_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="165">
               <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="48" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -54,7 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/colourlists/red.txt" />
         <option value="$PROJECT_DIR$/colourlists/yellow.txt" />
         <option value="$PROJECT_DIR$/colourlists/white.txt" />
         <option value="$PROJECT_DIR$/colourlists/purple.txt" />
@@ -66,6 +76,7 @@
         <option value="$PROJECT_DIR$/colourlists/blackOld.txt" />
         <option value="$PROJECT_DIR$/colourlists/brownOld.txt" />
         <option value="$PROJECT_DIR$/colourlists/redOld.txt" />
+        <option value="$PROJECT_DIR$/colourlists/red.txt" />
         <option value="$PROJECT_DIR$/download.py" />
       </list>
     </option>
@@ -100,6 +111,11 @@
             <path>
               <item name="colourvision-ml" type="b2602c69:ProjectViewProjectNode" />
               <item name="colourvision-ml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="colourvision-ml" type="b2602c69:ProjectViewProjectNode" />
+              <item name="colourvision-ml" type="462c0819:PsiDirectoryNode" />
+              <item name="imageset" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -173,10 +189,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32970297" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32970297" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -198,6 +214,33 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2340">
+          <caret line="157" column="50" selection-start-line="157" selection-start-column="50" selection-end-line="157" selection-end-column="50" />
+          <folding>
+            <element signature="e#226#235#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/colourlists/red.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7185">
+          <caret line="479" selection-start-line="479" selection-end-line="479" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/colourlists/pink.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="922">
@@ -205,13 +248,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/colourlists/blueOld.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="908">
-          <caret line="3429" column="61" selection-start-line="3429" selection-start-column="61" selection-end-line="3429" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/colourlists/blueOld.txt" />
     <entry file="file://$PROJECT_DIR$/colourlists/green.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="908">
@@ -247,13 +284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/colourlists/red.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="2642" column="61" selection-start-line="2642" selection-start-column="61" selection-end-line="2642" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/colourlists/yellow.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="908">
@@ -261,72 +291,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/colourlists/blackOld.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="908">
-          <caret line="3924" column="61" selection-start-line="3924" selection-start-column="61" selection-end-line="3924" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/colourlists/brownOld.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="908">
-          <caret line="2094" column="37" selection-start-line="2094" selection-start-column="37" selection-end-line="2094" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/colourlists/redOld.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
-          <caret line="2617" column="85" selection-start-line="2617" selection-start-column="85" selection-end-line="2617" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-5.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-6.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-7.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-8.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-9.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-10.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-11.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-12.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-13.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imageset/red/red-14.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/colourlists/blackOld.txt" />
+    <entry file="file://$PROJECT_DIR$/colourlists/brownOld.txt" />
+    <entry file="file://$PROJECT_DIR$/colourlists/redOld.txt" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-1.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-2.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-3.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-4.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-5.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-6.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-7.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-8.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-9.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-10.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-11.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-12.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-13.jpg" />
+    <entry file="file://$PROJECT_DIR$/imageset/red/red-14.jpg" />
     <entry file="file://$PROJECT_DIR$/test_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="165">
           <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="48" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -334,10 +318,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/colourlists/red.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7185">
+          <caret line="479" selection-start-line="479" selection-end-line="479" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/download.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="157" column="42" selection-start-line="157" selection-start-column="42" selection-end-line="157" selection-end-column="42" />
+        <state relative-caret-position="243">
+          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="e#226#235#0" expanded="true" />
           </folding>
