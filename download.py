@@ -86,7 +86,7 @@ with open(redImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/red/red-{}.jpg {}".format(redFileCounter, line))
         print("Got file {} of {} in the red image set".format(redFileCounter, redFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         redFileCounter += 1
         fileCounter += 1
 
@@ -94,7 +94,7 @@ with open(orangeImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/orange/orange-{}.jpg {}".format(orangeFileCounter, line))
         print("Got file {} of {} in the orange image set".format(orangeFileCounter, orangeFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         orangeFileCounter += 1
         fileCounter += 1
 
@@ -102,7 +102,7 @@ with open(yellowImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/yellow/yellow-{}.jpg {}".format(yellowFileCounter, line))
         print("Got file {} of {} in the yellow image set".format(yellowFileCounter, yellowFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         yellowFileCounter += 1
         fileCounter += 1
 
@@ -110,7 +110,7 @@ with open(greenImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/green/green-{}.jpg {}".format(greenFileCounter, line))
         print("Got file {} of {} in the green image set".format(greenFileCounter, greenFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         greenFileCounter += 1
         fileCounter += 1
 
@@ -118,7 +118,7 @@ with open(blueImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/blue/blue-{}.jpg {}".format(blueFileCounter, line))
         print("Got file {} of {} in the blue image set".format(blueFileCounter, blueFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         blueFileCounter += 1
         fileCounter += 1
 
@@ -126,14 +126,14 @@ with open(purpleImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/purple/purple-{}.jpg {}".format(purpleFileCounter, line))
         print("Got file {} of {} in the purple image set".format(purpleFileCounter, purpleFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         purpleFileCounter += 1
 
 with open(greyImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/grey/grey-{}.jpg {}".format(greyFileCounter, line))
         print("Got file {} of {} in the grey image set".format(greyFileCounter, greyFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         greyFileCounter += 1
         fileCounter += 1
 
@@ -141,7 +141,7 @@ with open(whiteImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/white/white-{}.jpg {}".format(whiteFileCounter, line))
         print("Got file {} of {} in the white image set".format(whiteFileCounter, whiteFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         whiteFileCounter += 1
         fileCounter += 1
 
@@ -149,7 +149,7 @@ with open(blackImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/black/black-{}.jpg {}".format(blackFileCounter, line))
         print("Got file {} of {} in the black image set".format(blackFileCounter, blackFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         blackFileCounter += 1
         fileCounter += 1
 
@@ -157,7 +157,7 @@ with open(brownImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/brown/brown-{}.jpg {}".format(brownFileCounter, line))
         print("Got file {} of {} in the brown image set".format(brownFileCounter, brownFileCount))
-        print("Files downloaded: {} of {}".format(fileCounter, totalFileCount))
+        print("Files downloaded: {} of {}\n".format(fileCounter, totalFileCount))
         brownFileCounter += 1
         fileCounter += 1
 
