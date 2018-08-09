@@ -118,5 +118,8 @@ pip-selfcheck.json
 .Python
 activate
 training_summaries
-
+imageset/
 *.pyc
+
+colourvision*.*
+

@@ -9,22 +9,22 @@
 import os
 from PIL import Image
 
-totalFileCount = 28463
+# create file counter to show download progress
 fileCounter = 1
 
-redFileCount = 2687
+redFileCount = 6384
 redFileCounter = 1
 
-orangeFileCount = 2604
+orangeFileCount = 7314
 orangeFileCounter = 1
 
-yellowFileCount = 2573
+yellowFileCount = 8301
 yellowFileCounter = 1
 
-greenFileCount = 2487
+greenFileCount = 8840
 greenFileCounter = 1
 
-blueFileCount = 3430
+blueFileCount = 4410
 blueFileCounter = 1
 
 purpleFileCount = 1686
@@ -42,18 +42,20 @@ blackFileCounter = 1
 brownFileCount = 2095
 brownFileCounter = 1
 
+totalFileCount = redFileCount + orangeFileCount + yellowFileCount + greenFileCount + blueFileCount + purpleFileCount + greyFileCount + +whiteFileCount + blackFileCount + brownFileCount
+
 # Location for all the urls where the files go
 # Image sources are all from the image-net.org synsets
-redImageList = './colourlists/red.txt'
-orangeImageList = './colourlists/orange.txt'
-yellowImageList = './colourlists/yellow.txt'
-greenImageList = './colourlists/green.txt'
-blueImageList = './colourlists/blue.txt'
-purpleImageList = './colourlists/purple.txt'
-greyImageList = './colourlists/grey.txt'
-whiteImageList = './colourlists/white.txt'
-blackImageList = './colourlists/black.txt'
-brownImageList = './colourlists/brown.txt'
+redImageList = './colourlists/old/red.txt'
+orangeImageList = './colourlists/old/orange.txt'
+yellowImageList = './colourlists/old/yellow.txt'
+greenImageList = './colourlists/old/green.txt'
+blueImageList = './colourlists/old/blue.txt'
+purpleImageList = './colourlists/old/purple.txt'
+greyImageList = './colourlists/old/grey.txt'
+whiteImageList = './colourlists/old/white.txt'
+blackImageList = './colourlists/old/black.txt'
+brownImageList = './colourlists/old/brown.txt'
 
 def createDirectories():
     os.system('mkdir -p imageset/red')
@@ -66,6 +68,7 @@ def createDirectories():
     os.system('mkdir -p imageset/white')
     os.system('mkdir -p imageset/black')
     os.system('mkdir -p imageset/brown')
+
 
 # check if an existing imageset directory exists. if it does,
 # delete and create new empty directories in their place
@@ -81,7 +84,6 @@ else:
 # download all the images
 print("Starting imageset download")
 
-# 'red' photos
 with open(redImageList, 'r') as f:
     for line in f:
         os.system("wget --timeout=10 -q -O imageset/red/red-{}.jpg {}".format(redFileCounter, line))
@@ -164,20 +166,33 @@ with open(brownImageList, 'r') as f:
 # Verify files
 os.system('clear')
 print("Verifying files. This may take a while...")
-for filename in os.listdir('./imageset'):
-    if filename.endswith('.jpg'):
-        try:
-            img = Image.open('./'+filename)
-            img.verify()
-        except (IOError, SyntaxError) as e:
-            print('Bad file: ', filename)
-            with open('bad_files.txt', 'a') as f:
-                f.write(filename + '\n')
+
+for root, subdirs, files in os.walk('./imageset'):
+    for file in files:
+        if os.path.splitext(file)[1].lower() in ('.jpg', '.jpeg'):
+            print(os.path.join(root, file))
+            filename = os.path.join(root, file)
+            try:
+                img = Image.open('./' + filename)
+                img.verify()
+            except (IOError, SyntaxError) as e:
+                print('Bad file: ', filename)
+                with open('bad_files.txt', 'a') as f:
+                    f.write(filename + '\n')
+
 # Resize images
+os.system('clear')
 print("Resizing Images. This will take a while...")
-for filename in os.listdir('./imageset'):
-    if filename.endswith('.jpg'):
-        img = Image.open(filename)
-        img = img.resize([299, 299], Image.ANTIALIAS)
+
+# Resize images
+for root, subdirs, files in os.walk('./imageset'):
+    for file in files:
+        if os.path.splitext(file)[1].lower() in ('.jpg', '.jpeg'):
+            print(os.path.join(root, file))
+            filename = os.path.join(root, file)
+            img = Image.open(filename)
+            img = img.resize([299, 299], Image.ANTIALIAS)
+
+print("Program Finished! You may start the model training process now.")
 
 print("Program Finished! You may start the model training process now.")

@@ -19,7 +19,7 @@ from tensorflow.core.framework import graph_pb2
 import coremltools
 
 # load the TF graph definition
-tf_model_path = './colour_model_graph.pb'
+tf_model_path = './colourvision_graph.pb'
 
 with open(tf_model_path, 'rb') as f:
     serialized = f.read()
@@ -62,7 +62,7 @@ gdef = strip_unused_lib.strip_unused(
     placeholder_type_enum = dtypes.float32.as_datatype_enum)
 
 # save to an outputfile
-frozen_model_file = './colour_model.pb'
+frozen_model_file = './colourvision_frozen.pb'
 
 with gfile.GFile(frozen_model_file, 'wb') as f:
     f.write(gdef.SerializeToString())
@@ -74,7 +74,7 @@ import tfcoreml
 input_tensor_shapes = {"Mul:0": [1, 299, 299, 3]} # batch size is 1
 
 # output coreml model path
-coreml_model_file = './ColourModel.mlmodel'
+coreml_model_file = './colourvision.mlmodel'
 
 # The TF model's output tensor name
 output_tensor_names = ['final_result:0']
