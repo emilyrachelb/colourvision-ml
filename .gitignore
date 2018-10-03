@@ -120,6 +120,9 @@ activate
 training_summaries
 imageset/
 *.pyc
+bad_files.txt
+imageset.zip
+
 
 colourvision*.*
 
