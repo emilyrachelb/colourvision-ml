@@ -1,5 +1,5 @@
 import os
-from frameworking.Spinner import Spinner
+from utils.Spinner import Spinner
 from sys import stdout as stdout
 
 
@@ -14,9 +14,6 @@ class Resize:
         './imageset/red',
         './imageset/yellow'
     ]
-
-    # create spinner instance
-    spinner = Spinner()
 
     def __init__(self):
         stdout.write("{:<40}".format("Resizing Images..."))

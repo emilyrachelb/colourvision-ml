@@ -6,7 +6,7 @@
 import os
 from sys import stdout as stdout
 from PIL import Image
-from frameworking.Spinner import Spinner
+from utils.Spinner import Spinner
 import warnings
 
 

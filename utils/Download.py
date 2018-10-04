@@ -3,30 +3,37 @@
 
 #   Filename:       download.py
 #   Author:         Samantha Emily-Rachel Belnavis
-#   Date:           July 14, 2018
+#   Date:           October 4, 2018
 #   Description:    Downloads a set of basic colour swatches
 
 import os
-from frameworking.Spinner import Spinner
+import tarfile
+
+from six.moves import urllib
+
 from sys import stdout as stdout
 
 
-class Download():
-    def __init__(self):
-        stdout.write("{:<40}".format("Downloading Imageset..."))
-        Spinner().start()
-        # pylint: disable=line-too-long
-        os.system('wget -qO imageset.zip https://chryseplanitia.nyc3.cdn.digitaloceanspaces.com/colourvision_imageset.zip')
-        # pylint: enable=line-too-long
-        Spinner().stop()
-        stdout.write('\b     [Done]')
-        stdout.write("\n")
-        stdout.flush()
+class Download:
+    IMAGESET_URL = 'https://chryseplanitia.nyc3.cdn.digitaloceanspaces.com/colourvision/archive/imageset_oct-4-2018.zip'
 
-        stdout.write("{:<40}".format("Extracting Imageset..."))
-        Spinner().start()
-        os.system('unzip -qq imageset.zip')
-        Spinner().stop()
-        stdout.write('\b     [Done]')
-        stdout.write("\n")
-        stdout.flush()
+    def __init__(self):
+        dest_directory = '../imagesets/unprocessed'
+        if not os.path.exists(dest_directory):
+            os.makedirs(dest_directory)
+        filename = self.IMAGESET_URL.split('/')[-1]
+        filepath = os.path.join(dest_directory, filename)
+
+        if not os.path.exists(filepath):
+            def _progress(count, block_size, total_size):
+                stdout.write('\r>> Downloading %s %.1f%%' %
+                             (filename, float(count * block_size) / float(total_size) * 100.0))
+
+                stdout.flush()
+            filepath, _ = urllib.request.urlretrieve(self.IMAGESET_URL, filepath, _progress)
+
+            print()
+            statinfo = os.stat(filepath)
+            print('Successfully downloaded',  filename, statinfo.st_size, 'bytes.')
+
+        tarfile.open(filepath, 'r:gz').extractall(dest_directory)

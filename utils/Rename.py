@@ -25,7 +25,7 @@
 
 import os
 from sys import stdout as stdout
-from frameworking.Spinner import Spinner
+from utils.Spinner import Spinner
 
 
 class Rename:
