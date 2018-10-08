@@ -1,6 +1,13 @@
 # colourvision-ml
 ML Framework for [ColourVision](https://github.com/samantharachelb/colourvision)
 
+### Setup
+- If running on OS X you must have python2 installed via Homebrew and OpenCV
+built from source.
+
+- If running on Linux you must have OpenCV built from source.
+
+
 ### Training the model
 - Run the preflight module `python preflight.py` to gather everything needed
 to create and train the model.
