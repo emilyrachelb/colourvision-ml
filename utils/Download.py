@@ -15,10 +15,28 @@ from sys import stdout as stdout
 
 
 class Download:
-    IMAGESET_URL = 'https://chryseplanitia.nyc3.cdn.digitaloceanspaces.com/colourvision/archive/imageset_oct-4-2018.zip'
+    # pylint: disable=line-too-long
+    IMAGESET_URL = 'https://chryseplanitia.nyc3.cdn.digitaloceanspaces.com/colourvision/archive/imageset_oct-4-2018.tar.gz'
+    PRETRAIN_INCEPTION_V3 = 'http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz'
+    # pylint: enable=line-too-long
 
-    def __init__(self):
-        dest_directory = '../imagesets/unprocessed'
+    def download_and_extract_pretrained_model(self):
+        dest_directory = './inception'
+        if not os.path.exists(dest_directory):
+            os.makedirs(dest_directory)
+        filename = self.PRETRAIN_INCEPTION_V3
+        filepath = os.path.join(dest_directory, filename)
+
+        if not os.path.exists(filepath):
+            def _progress(count, block_size, total_size):
+                stdout.write('\r>> Downloading %s %s.1f%%' %
+                             (filename, float(count * block_size) / float(total_size) * 100))
+                stdout.flush
+            filepath, _ = urllib.request.urlretrieve(self.PRETRAIN_INCEPTION_V3, filepath, _progress)
+
+
+    def download_and_extract_imageset(self):
+        dest_directory = './imagesets/unprocessed'
         if not os.path.exists(dest_directory):
             os.makedirs(dest_directory)
         filename = self.IMAGESET_URL.split('/')[-1]

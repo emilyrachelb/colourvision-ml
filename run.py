@@ -23,7 +23,34 @@
 #   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #   SOFTWARE.
 
-from utils.Download import Download
+# from utils.Download import Download
+# from preprocess.sort import Sort
 
-Download()
+#Download()
+#Sort()
 
+import os
+import cv2
+import numpy as np
+
+from color_extractor import ImageToColor
+
+IMAGE_SOURCE_DIR = './imageset/train_set'
+settings = { 'resize': {'rows': 299, 'crop': None},
+            'back': {'max_distance': 5, 'use_lab': True},
+            'skin': {'skin_type': 'none'},
+            'cluster': {'min_k': 2, 'max_k': 7},
+            'selector': {'strategy': 'largest', 'ratio.threshold': 0.75}
+            }
+
+npz = np.load('./preprocess/color_names.npz')
+
+image_to_colour = ImageToColor(npz['samples'], npz['labels'], settings)
+
+files = os.listdir(IMAGE_SOURCE_DIR)
+for file in files:
+    # noinspection PyUnresolvedReferences
+    print(file)
+    img = cv2.imread(file)
+    print(img)
+    #print(image_to_colour.get(img))

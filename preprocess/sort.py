@@ -31,17 +31,18 @@ from color_extractor import ImageToColor
 
 
 class Sort:
-    IMAGE_SOURCE_DIR = '../imageset/train_set'
-
+    IMAGE_SOURCE_DIR = './imageset/train_set'
+    settings = {'rows': 299, 'crop': 1}
     @staticmethod
     def get_root():
         print(os.path.dirname(os.path.abspath(__file__)))
 
     def __init__(self):
-        npz = np.load('color_names.npz')
-        image_to_colour = ImageToColor(npz['samples'], npz['labels'])
+        npz = np.load('./preprocess/color_names.npz')
+        image_to_colour = ImageToColor(npz['samples'], npz['labels'],self.settings)
 
         files = os.listdir(self.IMAGE_SOURCE_DIR)
         for file in files:
+            # noinspection PyUnresolvedReferences
             img = cv2.imread(file)
             print(image_to_colour.get(img))

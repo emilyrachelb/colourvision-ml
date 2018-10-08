@@ -123,6 +123,7 @@ def create_image_lists(image_dir, testing_percentage, validation_percentage):
     return None
   result = {}
   sub_dirs = [x[0] for x in gfile.Walk(image_dir)]
+
   # The root directory comes first, so skip it.
   is_root_dir = True
   for sub_dir in sub_dirs:
